@@ -10,6 +10,8 @@ public class NumberFlipVersion1 {
 		BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 		
 		String input = read.readLine();
+
+		int convertNumber = Integer.parseInt(input);
 		
 		for ( int no = input.length()-1; no >= 0; no-- ) {
 			System.out.print(input.charAt(no));
