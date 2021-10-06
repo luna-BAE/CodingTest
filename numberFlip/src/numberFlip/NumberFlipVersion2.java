@@ -10,11 +10,22 @@ public class NumberFlipVersion2 {
 		BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 		
 		String input = read.readLine();
+		int convertNum = Integer.parseInt(input);
 		
-		for ( int no = input.length()-1; no >= 0; no-- ) {
-			System.out.print(input.charAt(no));
+		System.out.println(flip(convertNum));
+		
+	}
+	
+	public static int flip(int num) {
+		
+		int result = 0;
+		
+		while( num!= 0 ) {
+			result = result * 10 + num % 10;
+			num /= 10;
 		}
 		
+		return result;
 	}
 	
 }
